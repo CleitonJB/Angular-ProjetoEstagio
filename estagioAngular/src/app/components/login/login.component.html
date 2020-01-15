@@ -1,0 +1,33 @@
+<p>LOGIN works!</p>
+
+<form> 
+    <div class="example-container">
+        <!-- Cabeçalho do bloco -->
+        <div class="HeaderBloco">
+            <h1> Log in </h1>
+        </div>
+
+        <!-- Usuário -->
+        <mat-form-field>
+            <input matInput type="text" placeholder="Username" required>
+        </mat-form-field>
+
+        <!-- Senha -->
+        <mat-form-field>
+            <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <!-- Enviar -->
+        <div class="Bt_Submit">
+            <button mat-stroked-button type="submit" color="primary">Submit</button>
+        </div>
+    </div>
+</form>
+<!-- 
+    <button mat-stroked-button>Basic</button>
+
+    <a mat-stroked-button routerLink=".">Link</a>
+-->

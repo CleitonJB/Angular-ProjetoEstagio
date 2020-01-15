@@ -1,0 +1,40 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+
+    margin: auto;
+    width: 70%;
+    background: lightgray;
+    border-radius: 1.2em;
+    border: 1px solid gray;
+  }
+  
+  .example-container > * {
+    margin: auto;
+    width: 80%;
+  }
+
+  .HeaderBloco{
+      text-align: center;
+      width: 100%;
+      padding: 15px 0px;
+  }
+
+  .HeaderBloco h1{
+      font-size: 2.4rem;
+      color: #673ab7;
+  }
+
+  mat-form-field{
+    padding: 50px 0px;
+  }
+
+  .Bt_Submit{
+    text-align: center;
+    padding-bottom: 40px;
+  }
+
+  .Bt_Submit button{
+      margin: auto;
+      width: 50%;
+  }

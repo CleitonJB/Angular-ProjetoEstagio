@@ -1,0 +1,21 @@
+.navBar{
+    max-width: 100%;
+    background: green;
+    padding: 15px 0px;
+}
+
+.Logo{
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    margin: auto 15px;
+}
+
+.Bts_LoginRegister{
+    position: relative;
+    float: right;
+}
+
+.Bts_LoginRegister button{
+    margin: auto 15px;
+}
