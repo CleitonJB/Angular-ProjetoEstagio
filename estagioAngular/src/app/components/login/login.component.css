@@ -1,32 +1,70 @@
 .example-container {
-    display: flex;
-    flex-direction: column;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 1.2em;
+  border: 1px solid gray;
+  margin-bottom: 60px;
+}
 
-    margin: auto;
-    width: 70%;
-    background: lightgray;
-    border-radius: 1.2em;
-    border: 1px solid gray;
+@media screen and (min-width: 700px){
+  .example-container {
+    width: 80%;
   }
-  
+}
+
+@media screen and (max-width: 700px){
+  .example-container {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 850px){
+  .example-container {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1000px){
+  .example-container {
+    width: 35%;
+  }
+}
+
   .example-container > * {
     margin: auto;
-    width: 80%;
+    width: 100%;
+    border-top-left-radius: 1.15em;
+    border-top-right-radius: 1.15em;
   }
 
   .HeaderBloco{
+      background: #673ab7;
       text-align: center;
       width: 100%;
-      padding: 15px 0px;
+      padding: 8px 0px;
   }
 
   .HeaderBloco h1{
-      font-size: 2.4rem;
-      color: #673ab7;
+    color: white;
   }
 
-  mat-form-field{
-    padding: 50px 0px;
+  @media screen and (max-width: 850px){
+    .HeaderBloco h1{
+      font-size: 6vw;
+    }
+  }
+
+  @media screen and (min-width: 850px){
+    .HeaderBloco h1{
+      font-size: 2.7vw;
+    }
+  }
+  
+  .mat-form-field{
+    max-width: 80%;
+    padding: 15px 0px;
   }
 
   .Bt_Submit{

@@ -1,22 +1,24 @@
-<p>LOGIN works!</p>
+<!-- <p>LOGIN works!</p> -->
 
-<form> 
+<form #formLogin="ngForm" (submit)="onLogin(formLogin)"> 
     <div class="example-container">
         <!-- Cabeçalho do bloco -->
         <div class="HeaderBloco">
-            <h1> Log in </h1>
+            <h1> Login </h1>
         </div>
 
         <!-- Usuário -->
-        <mat-form-field>
-            <input matInput type="text" placeholder="Username" required>
+        <mat-form-field class="mat-form-field" appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput type="text" placeholder="Username..." required >
         </mat-form-field>
 
         <!-- Senha -->
-        <mat-form-field>
-            <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" required>
+        <mat-form-field class="mat-form-field" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password..." [type]="hide ? 'text' : 'password'" required >
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
             </button>
         </mat-form-field>
 
