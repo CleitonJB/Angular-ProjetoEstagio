@@ -1,16 +1,24 @@
-import { User } from '../models/user.model';
 import { Injectable } from '@angular/core';
+
+import { User } from '../models/user.model';
 import { HttpClient } from '@angular/common/http';
+
+const apiUrl = 'http://vcmobile.com.br/VictorProjetoEstagio/Hackathon/WebApi/V01/Operadores_SelecionarTodos_Get';
+const loginUrl = "http://vcmobile.com.br/VictorProjetoEstagio/Hackathon/WebApi/V01/Operadores_ValidarLogin_Post";
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  apiUrl = 'http://vcmobile.com.br/VictorProjetoEstagio/Hackathon/WebApi/V01/Operadores_SelecionarTodos_Get';
-
-  constructor(private _http: HttpClient) { }
+  
+  constructor(private http: HttpClient) { }
 
   getUsuarios(){
-    return this._http.get<User[]>(this.apiUrl);
+    return this.http.get<User[]>(`${apiUrl}`);
+  }
+
+  loginUser(user){
+    return this.http.post<User>(`${loginUrl}`, user);
   }
 }

@@ -1,6 +1,6 @@
 <!-- <p>LOGIN works!</p> -->
 
-<form #formLogin="ngForm" (submit)="onLogin(formLogin)"> 
+<form> 
     <div class="example-container">
         <!-- Cabeçalho do bloco -->
         <div class="HeaderBloco">
@@ -10,13 +10,13 @@
         <!-- Usuário -->
         <mat-form-field class="mat-form-field" appearance="outline">
             <mat-label>Username</mat-label>
-            <input matInput type="text" placeholder="Username..." required >
+            <input matInput type="text" placeholder="Username..." required [(ngModel)]="loginUserData.usuario" name="usuario">
         </mat-form-field>
 
         <!-- Senha -->
         <mat-form-field class="mat-form-field" appearance="outline">
             <mat-label>Password</mat-label>
-            <input matInput placeholder="Password..." [type]="hide ? 'text' : 'password'" required >
+            <input matInput placeholder="Password..." [type]="hide ? 'text' : 'password'" required [(ngModel)]="loginUserData.senha" name="senha">
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
             </button>
@@ -24,7 +24,7 @@
 
         <!-- Enviar -->
         <div class="Bt_Submit">
-            <button mat-stroked-button type="submit" color="primary">Submit</button>
+            <button (click)="onLogin()" mat-stroked-button type="submit" color="primary">Submit</button>
         </div>
     </div>
 </form>
